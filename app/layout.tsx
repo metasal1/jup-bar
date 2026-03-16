@@ -26,14 +26,6 @@ export const metadata: Metadata = {
       "JupBar is a floating macOS ticker bar for Jupiter Cats. Just Uptodate Pricing for Jupiter Mobile and Jupiter Exchange.",
     url: "https://jup.bar",
     siteName: "jup.bar",
-    images: [
-      {
-        url: "/landing-screens/jupbar-floating.png?v=2",
-        width: 1600,
-        height: 900,
-        alt: "jup.bar floating ticker bar on macOS",
-      },
-    ],
     type: "website",
   },
   twitter: {
@@ -41,11 +33,11 @@ export const metadata: Metadata = {
     title: "jup.bar — JupBar for Jupiter Cats",
     description:
       "JupBar is a floating macOS ticker bar for Jupiter Cats. Just Uptodate Pricing for Jupiter Mobile and Jupiter Exchange.",
-    images: ["/landing-screens/jupbar-floating.png?v=2"],
   },
   icons: {
-    icon: "/jupbar-icon.png",
-    apple: "/jupbar-icon.png",
+    icon: "/icon.png",
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
   },
   other: {
     "theme-color": "#0b0f12",
