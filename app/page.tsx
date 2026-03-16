@@ -69,7 +69,7 @@ export default function Home() {
               Just Uptodate Pricing
             </span>
             <a
-              href="/jupbar-latest.dmg"
+              href="https://github.com/metasal1/macticker/releases/latest/download/jupbar-latest.dmg"
               className="rounded-full bg-gradient-to-br from-accent to-accent2 px-4 py-2 text-sm font-semibold text-bg transition-transform hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(249,114,98,0.3)]"
             >
               Download
@@ -122,7 +122,7 @@ export default function Home() {
 
           <div className="animate-on-scroll flex flex-wrap justify-center gap-3">
             <a
-              href="/jupbar-latest.dmg"
+              href="https://github.com/metasal1/macticker/releases/latest/download/jupbar-latest.dmg"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-accent to-accent2 px-7 py-3.5 text-[15px] font-semibold text-bg shadow-[0_14px_40px_rgba(249,114,98,0.28)] transition-all hover:-translate-y-0.5 hover:shadow-[0_18px_48px_rgba(249,114,98,0.35)]"
             >
               <svg
@@ -297,7 +297,7 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <a
-                href="/jupbar-latest.dmg"
+                href="https://github.com/metasal1/macticker/releases/latest/download/jupbar-latest.dmg"
                 className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-accent to-accent2 px-7 py-3.5 text-[15px] font-semibold text-bg shadow-[0_14px_40px_rgba(249,114,98,0.28)] transition-all hover:-translate-y-0.5 hover:shadow-[0_18px_48px_rgba(249,114,98,0.35)]"
               >
                 <svg
@@ -344,7 +344,7 @@ export default function Home() {
           </a>
           <span>jup.bar &middot; JupBar for Jupiter Cats</span>
           <span className="opacity-60">
-            v0.3.1 &middot; build 9 &middot; updated 2026-02-13
+            v1.1.0 &middot; updated 2026-03-17
           </span>
         </div>
       </footer>
