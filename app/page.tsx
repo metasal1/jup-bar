@@ -325,8 +325,18 @@ export default function Home() {
               </a>
             </div>
             <p className="mt-6 text-sm text-muted/60">
-              macOS DMG &middot; Updates as we ship new builds
+              macOS DMG &middot; Apple Silicon &middot; macOS 14+
             </p>
+            <details className="mt-4 text-left mx-auto max-w-md">
+              <summary className="cursor-pointer text-xs text-muted/60 hover:text-muted transition-colors">
+                First launch blocked by Gatekeeper?
+              </summary>
+              <div className="mt-2 rounded-xl border border-border/60 bg-card/60 p-4 text-xs text-muted leading-relaxed">
+                <p className="mb-2">JupBar isn&apos;t notarized yet. To open it:</p>
+                <p className="mb-1"><strong>Option 1:</strong> Right-click the app &rarr; Open &rarr; click Open in the dialog.</p>
+                <p><strong>Option 2:</strong> Run in Terminal: <code className="rounded bg-bg/80 px-1.5 py-0.5 font-mono text-accent">xattr -cr /Applications/jup.bar.app</code></p>
+              </div>
+            </details>
           </div>
         </div>
       </section>
