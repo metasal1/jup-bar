@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 const tokens = [
@@ -327,16 +329,25 @@ export default function Home() {
             <p className="mt-6 text-sm text-muted/60">
               macOS DMG &middot; Apple Silicon &middot; macOS 14+
             </p>
-            <details className="mt-4 text-left mx-auto max-w-md">
-              <summary className="cursor-pointer text-xs text-muted/60 hover:text-muted transition-colors">
-                First launch blocked by Gatekeeper?
-              </summary>
-              <div className="mt-2 rounded-xl border border-border/60 bg-card/60 p-4 text-xs text-muted leading-relaxed">
-                <p className="mb-2">JupBar isn&apos;t notarized yet. To open it:</p>
-                <p className="mb-1"><strong>Option 1:</strong> Right-click the app &rarr; Open &rarr; click Open in the dialog.</p>
-                <p><strong>Option 2:</strong> Run in Terminal: <code className="rounded bg-bg/80 px-1.5 py-0.5 font-mono text-accent">xattr -cr /Applications/jup.bar.app</code></p>
+            <div className="mt-6 mx-auto max-w-md">
+              <div className="rounded-xl border border-border/60 bg-card/60 p-4">
+                <p className="mb-3 text-xs font-semibold text-muted">macOS: Run after install to bypass &quot;App Damaged/Could not verify safe&quot;</p>
+                <div className="flex gap-2">
+                  <code className="flex-1 rounded bg-bg/80 px-3 py-2 font-mono text-xs text-accent overflow-x-auto">
+                    xattr -rd com.apple.quarantine /Applications/jup.bar.app
+                  </code>
+                  <button
+                    onClick={() => {
+                      navigator.clipboard.writeText("xattr -rd com.apple.quarantine /Applications/jup.bar.app");
+                      alert("Copied to clipboard!");
+                    }}
+                    className="shrink-0 rounded-lg bg-accent/20 hover:bg-accent/30 px-3 py-2 text-xs font-semibold text-accent transition-colors"
+                  >
+                    Copy
+                  </button>
+                </div>
               </div>
-            </details>
+            </div>
           </div>
         </div>
       </section>
