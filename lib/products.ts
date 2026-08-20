@@ -1,4 +1,4 @@
-import { jupRef } from "./jup-ref";
+import { jupRef, JUP_GO_LINK } from "./jup-ref";
 
 export type ProductCategory =
   | "trade"
@@ -233,11 +233,20 @@ const RAW: Product[] = [
   {
     id: "mobile",
     name: "Jupiter Mobile",
-    blurb: "Trade on the go",
-    href: "https://jup.ag/mobile",
+    blurb: "App install / open via Adjust deep link (l6gxn)",
+    href: JUP_GO_LINK,
     category: "apps",
     icon: "mobile.svg",
     featured: true,
+    official: true,
+  },
+  {
+    id: "mobile-web",
+    name: "Mobile (web page)",
+    blurb: "jup.ag/mobile marketing page",
+    href: "https://jup.ag/mobile",
+    category: "apps",
+    icon: "mobile.svg",
     official: true,
   },
   {
@@ -384,6 +393,8 @@ const RAW: Product[] = [
 
 export const PRODUCTS: Product[] = RAW.map((p) => {
   if (!p.official) return p;
+  // App Adjust link — do not rewrite
+  if (p.id === "mobile" || p.href.includes("go.link")) return p;
   // only re-link jup.ag / *.jup.ag / known jup hosts
   try {
     const host = new URL(p.href).hostname;

@@ -25,7 +25,8 @@ Developer Docs, Dev Blog, Data API
 - sol.new — token launcher
 
 ## Referral
-refId + ref = yfgv2ibxy07v on official jup.ag / *.jup.ag links
+- Web jup.ag: refId + ref = yfgv2ibxy07v
+- Mobile app: https://jupiter.go.link/l6gxn (Adjust code l6gxn)
 
 ## Builder
 https://metasal.xyz · https://x.com/metasal · https://milysec.com
