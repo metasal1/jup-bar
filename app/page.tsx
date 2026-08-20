@@ -1,4 +1,6 @@
 import HomeClient from "./home-client";
+import { PRODUCTS } from "@/lib/products";
+import { PEOPLE, ALL_SOCIALS } from "@/lib/community";
 
 export default function Page() {
   return (
@@ -6,30 +8,35 @@ export default function Page() {
       <div className="sr-only">
         <h1>jup.bar — The Unofficial Directory of Jupiter Products</h1>
         <p>
-          Products, people, X/Twitter accounts, Discord, and Telegram links for
-          the Jupiter ecosystem. Built by Metasal. Not affiliated with Jupiter
-          Labs.
+          Unofficial directory of Jupiter products, people, X accounts, Discord,
+          and Telegram. Built by Metasal. Not affiliated with Jupiter Labs.
         </p>
-        <h2>Official socials</h2>
+        <h2>Products</h2>
         <ul>
-          <li>
-            <a href="https://discord.gg/jup">Discord</a>
-          </li>
-          <li>
-            <a href="https://t.me/jup_dao">Telegram DAO</a>
-          </li>
-          <li>
-            <a href="https://t.me/jup_dev">Telegram Dev</a>
-          </li>
-          <li>
-            <a href="https://x.com/JupiterExchange">@JupiterExchange</a>
-          </li>
-          <li>
-            <a href="https://x.com/JupDevRel">@JupDevRel</a>
-          </li>
-          <li>
-            <a href="https://x.com/weremeow">Meow · @weremeow</a>
-          </li>
+          {PRODUCTS.map((p) => (
+            <li key={p.id}>
+              <a href={p.href}>{p.name}</a> — {p.blurb}
+            </li>
+          ))}
+        </ul>
+        <h2>People</h2>
+        <ul>
+          {PEOPLE.map((p) => (
+            <li key={p.id}>
+              <a href={p.href}>
+                {p.name} (@{p.handle})
+              </a>{" "}
+              — {p.role}
+            </li>
+          ))}
+        </ul>
+        <h2>Social channels</h2>
+        <ul>
+          {ALL_SOCIALS.map((s) => (
+            <li key={s.id}>
+              <a href={s.href}>{s.name}</a> — {s.blurb}
+            </li>
+          ))}
         </ul>
       </div>
       <HomeClient />
