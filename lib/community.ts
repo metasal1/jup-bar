@@ -41,13 +41,6 @@ export const PEOPLE: Person[] = [
     href: "https://x.com/0xanmol",
     note: "github.com/0xanmol · jup-ag org",
   },
-  {
-    id: "sunnyezz",
-    name: "Sunny",
-    handle: "sunnyezz",
-    role: "Community / public voice",
-    href: "https://x.com/sunnyezz",
-  },
 ];
 
 export const X_ACCOUNTS: SocialLink[] = [
