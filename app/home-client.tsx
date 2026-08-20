@@ -581,7 +581,9 @@ export default function HomeClient() {
           <>
             <p className="mb-3 text-xs text-faint">
               {socialList.length} link{socialList.length === 1 ? "" : "s"}
-              {view === "x" ? " · X / Twitter" : ""}
+              {view === "x"
+                ? " · X / Twitter · JupiterExchange org only"
+                : ""}
               {view === "discord" ? " · Discord" : ""}
               {view === "telegram" ? " · Telegram" : ""}
               {view === "github" ? " · GitHub" : ""}
@@ -716,6 +718,11 @@ function SocialCard({ social }: { social: SocialLink }) {
               {social.name}
             </span>
             <PlatformBadge platform={social.platform} />
+            {social.official && social.platform === "x" && (
+              <span className="rounded-md bg-primary/15 px-1.5 py-0.5 text-[10px] font-semibold tracking-wide text-primary">
+                JupiterExchange org
+              </span>
+            )}
           </div>
           <p className="mt-1 text-xs leading-relaxed text-muted">
             {social.blurb}
