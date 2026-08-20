@@ -6,11 +6,31 @@ export default function Page() {
       <div className="sr-only">
         <h1>jup.bar — The Unofficial Directory of Jupiter Products</h1>
         <p>
-          Sortable, pinable, shuffleable map of every Jupiter app — Swap, Spot,
-          Limit, DCA, Perps, Prediction, Lend, Borrow, Multiply, Strategies,
-          Portfolio, Send, Mobile, Studio, Plugin, Governance, Docs, Support,
-          Academy, and more. Built by Metasal. Not affiliated with Jupiter Labs.
+          Products, people, X/Twitter accounts, Discord, and Telegram links for
+          the Jupiter ecosystem. Built by Metasal. Not affiliated with Jupiter
+          Labs.
         </p>
+        <h2>Official socials</h2>
+        <ul>
+          <li>
+            <a href="https://discord.gg/jup">Discord</a>
+          </li>
+          <li>
+            <a href="https://t.me/jup_dao">Telegram DAO</a>
+          </li>
+          <li>
+            <a href="https://t.me/jup_dev">Telegram Dev</a>
+          </li>
+          <li>
+            <a href="https://x.com/JupiterExchange">@JupiterExchange</a>
+          </li>
+          <li>
+            <a href="https://x.com/JupDevRel">@JupDevRel</a>
+          </li>
+          <li>
+            <a href="https://x.com/weremeow">Meow · @weremeow</a>
+          </li>
+        </ul>
       </div>
       <HomeClient />
     </>

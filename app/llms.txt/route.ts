@@ -7,6 +7,7 @@ Not affiliated with Jupiter Labs. Built by Metasal (metasal.xyz).
 
 ## Features
 - Full official product grid (Trade · Earn · Manage · Apps · Developers · Community)
+- People, X/Twitter, Discord, Telegram, GitHub tabs
 - Pin favourites (localStorage)
 - Shuffle + A–Z / Featured / Category sort
 - Category: **No Jup equivalent** for third-party tools (JupBar, jup.gifts, …)
