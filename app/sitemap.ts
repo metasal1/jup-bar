@@ -10,6 +10,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: "https://jup.bar/feedback",
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
       url: "https://jup.bar/llms.txt",
       lastModified: now,
       changeFrequency: "weekly",
