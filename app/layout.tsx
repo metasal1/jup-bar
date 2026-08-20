@@ -1,33 +1,25 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Sora } from "next/font/google";
+import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
 const GA_ID = "G-ZEE2ETRWL9";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
 });
 
-const sora = Sora({
-  variable: "--font-sora",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const title = "jup.bar — Jupiter Exchange ecosystem links";
+const title = "jup.bar — Unofficial Directory of Jupiter Products";
 const description =
-  "Sortable icon directory of Jupiter products — Swap, Perps, Lend, Multiply, Portfolio, Mobile, Studio, and more. Every jup.ag link is a referral re-link.";
+  "The unofficial directory of Jupiter products. Sort, pin, and shuffle Swap, Perps, Lend, Multiply, Portfolio, Mobile, Studio, Docs, and more — with referral re-links on every official jup.ag URL.";
 
 export const metadata: Metadata = {
   title,
   description,
   metadataBase: new URL("https://jup.bar"),
-  alternates: {
-    canonical: "https://jup.bar",
-  },
+  alternates: { canonical: "https://jup.bar" },
   openGraph: {
     title,
     description,
@@ -46,9 +38,7 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
     apple: "/apple-icon.png",
   },
-  other: {
-    "theme-color": "#0b0f12",
-  },
+  other: { "theme-color": "#0A0E13" },
 };
 
 const jsonLd = {
@@ -61,64 +51,26 @@ const jsonLd = {
       name: "jup.bar",
       description,
       publisher: { "@id": "https://jup.bar/#org" },
-      inLanguage: "en",
     },
     {
       "@type": "Organization",
       "@id": "https://jup.bar/#org",
-      name: "jup.bar",
+      name: "jup.bar (unofficial)",
       url: "https://jup.bar",
-      logo: "https://jup.bar/jupbar-icon.png",
-      sameAs: [
-        "https://x.com/metasal",
-        "https://github.com/metasal1/jup-bar",
-      ],
-    },
-    {
-      "@type": "ItemList",
-      "@id": "https://jup.bar/#ecosystem",
-      name: "Jupiter Exchange ecosystem",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Jupiter Swap",
-          url: "https://jup.ag/swap",
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Jupiter Perps",
-          url: "https://jup.ag/perps",
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: "Jupiter Lend",
-          url: "https://jup.ag/lend/earn",
-        },
-        {
-          "@type": "ListItem",
-          position: 4,
-          name: "Jupiter Portfolio",
-          url: "https://jup.ag/portfolio",
-        },
-        {
-          "@type": "ListItem",
-          position: 5,
-          name: "Jupiter Mobile",
-          url: "https://jup.ag/mobile",
-        },
-      ],
+      founder: {
+        "@type": "Person",
+        name: "Metasal",
+        url: "https://metasal.xyz",
+      },
+      description:
+        "Unofficial directory of Jupiter Exchange products. Not affiliated with Jupiter Labs.",
     },
   ],
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <head>
@@ -127,9 +79,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body
-        className={`${spaceGrotesk.variable} ${sora.variable} font-sans antialiased`}
-      >
+      <body className={`${inter.variable} font-sans antialiased`}>
         {children}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
