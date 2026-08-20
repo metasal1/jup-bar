@@ -20,10 +20,20 @@ export type SocialLink = {
   href: string;
   platform: "x" | "discord" | "telegram" | "github" | "other";
   blurb: string;
+  /** Only true when account is JupiterExchange X org / affiliate badge. */
   official?: boolean;
 };
 
-/** Visible public faces — keep conservative; no private/dox. */
+/**
+ * X accounts listed as Official MUST carry the JupiterExchange organization
+ * affiliation on X (org badge / announced pillar). Fan, parody, and unaffiliated
+ * handles stay out of this list.
+ *
+ * Source of truth: JupiterExchange org + public pillar announcements
+ * (@jupiter_trade / @jupiter_earn / @jupiter_manage) + clear org affiliates.
+ */
+export const X_ORG_HANDLE = "JupiterExchange";
+
 export const PEOPLE: Person[] = [
   {
     id: "meow",
@@ -39,33 +49,26 @@ export const PEOPLE: Person[] = [
     handle: "0xanmol",
     role: "Engineering (public GitHub)",
     href: "https://x.com/0xanmol",
-    note: "github.com/0xanmol · jup-ag org",
+    note: "github.com/0xanmol · jup-ag org · X org affiliate",
+  },
+  {
+    id: "ssiong",
+    name: "ssiong",
+    handle: "ssiong",
+    role: "Public Jupiter voice",
+    href: "https://x.com/ssiong",
+    note: "ss lim",
   },
 ];
 
+/** Official X only — JupiterExchange org / verified affiliates. */
 export const X_ACCOUNTS: SocialLink[] = [
   {
     id: "x-main",
     name: "@JupiterExchange",
     href: "https://x.com/JupiterExchange",
     platform: "x",
-    blurb: "Main Jupiter account",
-    official: true,
-  },
-  {
-    id: "x-onchain",
-    name: "@JupiterOnchain",
-    href: "https://x.com/JupiterOnchain",
-    platform: "x",
-    blurb: "Onchain / product surface",
-    official: true,
-  },
-  {
-    id: "x-devrel",
-    name: "@JupDevRel",
-    href: "https://x.com/JupDevRel",
-    platform: "x",
-    blurb: "Developers & integrators",
+    blurb: "Main org account",
     official: true,
   },
   {
@@ -73,7 +76,7 @@ export const X_ACCOUNTS: SocialLink[] = [
     name: "@jupiter_trade",
     href: "https://x.com/jupiter_trade",
     platform: "x",
-    blurb: "Trade pillar",
+    blurb: "Trade pillar · JupiterExchange org",
     official: true,
   },
   {
@@ -81,7 +84,7 @@ export const X_ACCOUNTS: SocialLink[] = [
     name: "@jupiter_earn",
     href: "https://x.com/jupiter_earn",
     platform: "x",
-    blurb: "Earn pillar",
+    blurb: "Earn pillar · JupiterExchange org",
     official: true,
   },
   {
@@ -89,15 +92,15 @@ export const X_ACCOUNTS: SocialLink[] = [
     name: "@jupiter_manage",
     href: "https://x.com/jupiter_manage",
     platform: "x",
-    blurb: "Manage pillar",
+    blurb: "Manage pillar · JupiterExchange org",
     official: true,
   },
   {
-    id: "x-lend",
-    name: "@jup_lend",
-    href: "https://x.com/jup_lend",
+    id: "x-devrel",
+    name: "@JupDevRel",
+    href: "https://x.com/JupDevRel",
     platform: "x",
-    blurb: "Jupiter Lend",
+    blurb: "Developers · JupiterExchange org",
     official: true,
   },
   {
@@ -105,23 +108,23 @@ export const X_ACCOUNTS: SocialLink[] = [
     name: "@jup_dao",
     href: "https://x.com/jup_dao",
     platform: "x",
-    blurb: "DAO / governance chatter",
+    blurb: "DAO · JupiterExchange org",
     official: true,
   },
   {
-    id: "x-jupuary",
-    name: "@jupuary",
-    href: "https://x.com/jupuary",
+    id: "x-onchain",
+    name: "@JupiterOnchain",
+    href: "https://x.com/JupiterOnchain",
     platform: "x",
-    blurb: "Jupuary season",
+    blurb: "Onchain surface · JupiterExchange org",
     official: true,
   },
   {
-    id: "x-research",
-    name: "@JupResearch",
-    href: "https://x.com/JupResearch",
+    id: "x-lend",
+    name: "@jup_lend",
+    href: "https://x.com/jup_lend",
     platform: "x",
-    blurb: "Research",
+    blurb: "Jupiter Lend · JupiterExchange org",
     official: true,
   },
   {
@@ -129,55 +132,7 @@ export const X_ACCOUNTS: SocialLink[] = [
     name: "@jupiter_support",
     href: "https://x.com/jupiter_support",
     platform: "x",
-    blurb: "Support",
-    official: true,
-  },
-  {
-    id: "x-portal",
-    name: "@JupiterPortal",
-    href: "https://x.com/JupiterPortal",
-    platform: "x",
-    blurb: "Portal / API surface",
-    official: true,
-  },
-  {
-    id: "x-terminal",
-    name: "@Jup_Terminal",
-    href: "https://x.com/Jup_Terminal",
-    platform: "x",
-    blurb: "Terminal",
-    official: true,
-  },
-  {
-    id: "x-ape",
-    name: "@JupApe",
-    href: "https://x.com/JupApe",
-    platform: "x",
-    blurb: "Ape / launch culture",
-    official: true,
-  },
-  {
-    id: "x-asr",
-    name: "@jup_asr",
-    href: "https://x.com/jup_asr",
-    platform: "x",
-    blurb: "Active Staking Rewards",
-    official: true,
-  },
-  {
-    id: "x-cat",
-    name: "@jupcat",
-    href: "https://x.com/jupcat",
-    platform: "x",
-    blurb: "Cat energy",
-    official: true,
-  },
-  {
-    id: "x-jupitersupport",
-    name: "@jupitersupport",
-    href: "https://x.com/jupitersupport",
-    platform: "x",
-    blurb: "Support alias",
+    blurb: "Support · JupiterExchange org",
     official: true,
   },
 ];
