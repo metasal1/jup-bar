@@ -1,25 +1,28 @@
 const BODY = `# jup.bar
 
-> Sortable Jupiter Exchange ecosystem directory. Icon grid of official products with referral re-links on every jup.ag URL.
+> The Unofficial Directory of Jupiter Products — sortable, pinable, shuffleable icon map of the Jupiverse.
 
-## Purpose
-- Landing hub for Jupiter Cats to open Swap, Perps, Lend, Multiply, Portfolio, Mobile, Studio, Prediction, and more
-- All outbound https://jup.ag (and *.jup.ag) links append referral refId/ref = yfgv2ibxy07v
-- Optional: JupBar macOS ticker download (non-referral GitHub DMG)
+## Disclaimer
+Not affiliated with Jupiter Labs. Built by Metasal (metasal.xyz).
+
+## Features
+- Full official product grid (Trade · Earn · Manage · Apps · Developers · Community)
+- Pin favourites (localStorage)
+- Shuffle + A–Z / Featured / Category sort
+- Category: **No Jup equivalent** for third-party tools (JupBar, jup.gifts, …)
+- Official jup.ag / *.jup.ag links append referral refId+ref
 
 ## Site
-- Homepage: https://jup.bar/
-- GA4: G-ZEE2ETRWL9
-- Sitemap: https://jup.ag is external; our sitemap is https://jup.ag no — https://jup.bar/sitemap.xml
+- https://jup.bar/
+- https://jup.bar/llms-full.txt
+- GA4 G-ZEE2ETRWL9
 
-## Contact
-- Builder: https://metasal.xyz/?ref=jupbar
-- X: https://x.com/metasal
-- Full text: https://jup.bar/llms-full.txt
+## Credit
+Metasal · @metasal · milysec.com
 `;
 
 export function GET() {
-  return new Response(BODY.replace("https://jup.ag no — ", ""), {
+  return new Response(BODY, {
     headers: {
       "Content-Type": "text/plain; charset=utf-8",
       "Cache-Control": "public, max-age=3600",

@@ -1,37 +1,34 @@
-const BODY = `# jup.ag ecosystem via jup.bar
+const BODY = `# jup.bar — full reference
 
-## Summary
-jup.bar is a third-party sortable icon directory of **Jupiter Exchange** products. It is not operated by Jupiter Labs. Every link to jup.ag / *.jup.ag includes the builder's referral parameters (\`refId\` and \`ref\` = yfgv2ibxy07v).
+## Positioning
+**The Unofficial Directory of Jupiter Products.**
+Third-party catalog by Metasal. Not operated by or endorsed as official Jupiter Labs infrastructure.
 
-## Featured destinations (re-linked)
-- Swap — https://jup.ag/swap
-- Spot — https://jup.ag/spot
-- Limit — https://jup.ag/limit
-- Recurring / DCA — https://jup.ag/recurring
-- Perps — https://jup.ag/perps
-- Prediction — https://jup.ag/prediction
-- Lend Earn — https://jup.ag/lend/earn
-- Lend Borrow — https://jup.ag/lend/borrow
-- Multiply — https://jup.ag/lend/borrow/multiply
-- Portfolio — https://jup.ag/portfolio
-- Send — https://jup.ag/send
-- Mobile — https://jup.ag/mobile
-- Studio — https://studio.jup.ag/launch
-- Stake — https://jup.ag/stake
-- Rewards — https://jup.ag/rewards
-- Governance — https://vote.jup.ag/
-- Developers — https://developers.jup.ag/
+## UX
+- Categories: All · Pinned · Trade · Earn · Manage · Apps · Developers · Community · No Jup equivalent
+- Sort: Featured first · A–Z · Category
+- Pin: localStorage key jupbar.pins.v1
+- Shuffle: client Fisher–Yates of current filter
 
-## UI
-- Categories: Trade · Earn · Manage · Apps · Dev · Tools
-- Sort: Featured · A–Z · Category
-- Search filter client-side
+## Official destinations (referral on jup.ag hosts)
+Home, Swap, Spot, Trending, Watchlist, Limit, Recurring/DCA, Perps, Prediction,
+Lend Earn, Lend Borrow, Multiply, Strategies, Stake, Rewards,
+Portfolio, Send, Onboard, Updates,
+Mobile, Studio, Studio Launch, Plugin,
+Governance (vote.jup.ag), Support, Academy, User Docs, Status,
+Developer Docs, Dev Blog, Data API
 
-## Tooling tile
-- JupBar macOS DMG (GitHub release) — floating ticker; not a jup.ag re-link
+## No Jupiter equivalent (third-party)
+- JupBar — macOS floating ticker (GitHub DMG)
+- Jup Gifts — jup.gifts magic-link gifts
+- Solana Icons — icons.sol.new
+- sol.new — token launcher
+
+## Referral
+refId + ref = yfgv2ibxy07v on official jup.ag / *.jup.ag links
 
 ## Builder
-- https://metasal.xyz · https://x.com/metasal · https://github.com/metasal1/jup-bar
+https://metasal.xyz · https://x.com/metasal · https://milysec.com
 `;
 
 export function GET() {
