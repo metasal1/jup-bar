@@ -296,15 +296,23 @@ export default function HomeClient() {
               </p>
             </div>
           </div>
-          <a
-            href={PRODUCTS.find((p) => p.id === "home")!.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackOpen(PRODUCTS.find((p) => p.id === "home")!)}
-            className="inline-flex h-9 items-center rounded-full bg-primary px-4 text-sm font-semibold text-primary-fg transition hover:brightness-110 active:scale-[0.98]"
-          >
-            Open jup.ag
-          </a>
+          <div className="flex items-center gap-2">
+            <a
+              href="/feedback"
+              className="hidden h-9 items-center rounded-full border border-border px-3 text-xs font-medium text-muted transition hover:border-primary/40 hover:text-primary sm:inline-flex"
+            >
+              Feedback
+            </a>
+            <a
+              href={PRODUCTS.find((p) => p.id === "home")!.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackOpen(PRODUCTS.find((p) => p.id === "home")!)}
+              className="inline-flex h-9 items-center rounded-full bg-primary px-4 text-sm font-semibold text-primary-fg transition hover:brightness-110 active:scale-[0.98]"
+            >
+              Open jup.ag
+            </a>
+          </div>
         </div>
       </header>
 
@@ -619,6 +627,10 @@ export default function HomeClient() {
                 </a>
                 {" · "}
                 jup.bar
+                {" · "}
+                <a href="/feedback" className="hover:text-primary">
+                  Feedback
+                </a>
               </p>
             </div>
           </div>
