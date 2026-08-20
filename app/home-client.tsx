@@ -23,6 +23,7 @@ import {
   type ProductCategory,
   type SortMode,
 } from "@/lib/products";
+import { JUP_GO_LINK } from "@/lib/jup-ref";
 
 type View = "products" | "people" | "x" | "discord" | "telegram" | "github";
 
@@ -302,6 +303,17 @@ export default function HomeClient() {
               className="hidden h-9 items-center rounded-full border border-border px-3 text-xs font-medium text-muted transition hover:border-primary/40 hover:text-primary sm:inline-flex"
             >
               Feedback
+            </a>
+            <a
+              href={JUP_GO_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() =>
+                track("jup_golink_click", { code: "l6gxn", href: JUP_GO_LINK })
+              }
+              className="hidden h-9 items-center rounded-full border border-primary/40 bg-primary/10 px-3 text-xs font-semibold text-primary transition hover:bg-primary/20 sm:inline-flex"
+            >
+              Get app
             </a>
             <a
               href={PRODUCTS.find((p) => p.id === "home")!.href}
