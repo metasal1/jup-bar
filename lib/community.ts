@@ -1,5 +1,10 @@
 /** Public Jupiter people + social channels (unofficial catalog). */
 
+/** Local cached PFP path (downloaded from unavatar). */
+export function pfpSrc(handle: string): string {
+  return `/pfp/${handle.replace(/^@/, "").toLowerCase()}.jpg`;
+}
+
 export type Person = {
   id: string;
   name: string;
@@ -175,14 +180,6 @@ export const X_ACCOUNTS: SocialLink[] = [
     official: true,
   },
   {
-    id: "x-lock",
-    name: "@JupLock",
-    href: "https://x.com/JupLock",
-    platform: "x",
-    blurb: "Lock / related",
-    official: true,
-  },
-  {
     id: "x-jupitersupport",
     name: "@jupitersupport",
     href: "https://x.com/jupitersupport",
@@ -196,7 +193,7 @@ export const DISCORD_LINKS: SocialLink[] = [
   {
     id: "discord-main",
     name: "Jupiter Discord",
-    href: "https://discord.gg/jup",
+    href: "https://discord.com/invite/jup",
     platform: "discord",
     blurb: "Official community · product channels · support",
     official: true,

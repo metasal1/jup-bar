@@ -9,6 +9,7 @@ import {
   PEOPLE,
   TELEGRAM_LINKS,
   X_ACCOUNTS,
+  pfpSrc,
   type Person,
   type SocialLink,
 } from "@/lib/community";
@@ -136,14 +137,32 @@ function PlatformBadge({ platform }: { platform: SocialLink["platform"] }) {
   );
 }
 
-function Avatar({ label }: { label: string }) {
-  const letter = label.replace("@", "").charAt(0).toUpperCase() || "J";
+function Avatar({ label, handle }: { label: string; handle?: string }) {
+  const key = (handle || label).replace("@", "");
+  const src = pfpSrc(key);
+  const letter = key.charAt(0).toUpperCase() || "J";
   return (
-    <div
-      aria-hidden
-      className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-primary/90 to-cyan/80 text-sm font-bold text-primary-fg ring-1 ring-border"
-    >
-      {letter}
+    <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full bg-gradient-to-br from-primary/90 to-cyan/80 ring-1 ring-border">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        alt=""
+        width={44}
+        height={44}
+        className="h-11 w-11 object-cover"
+        onError={(e) => {
+          const el = e.currentTarget;
+          el.style.display = "none";
+          const fallback = el.nextElementSibling as HTMLElement | null;
+          if (fallback) fallback.style.display = "flex";
+        }}
+      />
+      <div
+        aria-hidden
+        className="absolute inset-0 hidden items-center justify-center text-sm font-bold text-primary-fg"
+      >
+        {letter}
+      </div>
     </div>
   );
 }
@@ -632,7 +651,7 @@ function PersonCard({ person }: { person: Person }) {
         }
         className="group flex h-full items-start gap-3 rounded-2xl border border-border bg-card/70 p-4 transition hover:border-primary/35 hover:bg-card2/80"
       >
-        <Avatar label={person.handle} />
+        <Avatar label={person.name} handle={person.handle} />
         <div className="min-w-0">
           <div className="flex flex-wrap items-center gap-2">
             <span className="text-sm font-semibold text-text group-hover:text-primary">
@@ -666,7 +685,7 @@ function SocialCard({ social }: { social: SocialLink }) {
         }
         className="group flex h-full items-start gap-3 rounded-2xl border border-border bg-card/70 p-4 transition hover:border-primary/35 hover:bg-card2/80"
       >
-        <Avatar label={social.name} />
+        <Avatar label={social.name} handle={social.name.replace("@","")} />
         <div className="min-w-0">
           <div className="flex flex-wrap items-center gap-2">
             <span className="text-sm font-semibold text-text group-hover:text-primary">
