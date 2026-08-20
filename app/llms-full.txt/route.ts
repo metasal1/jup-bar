@@ -1,38 +1,37 @@
-const BODY = `# jup.bar — full reference
+const BODY = `# jup.ag ecosystem via jup.bar
 
 ## Summary
-jup.bar is the marketing and download site for **JupBar**, a free floating macOS menu-bar ticker built for Jupiter ($JUP) users (“Jupiter Cats”). It shows live token prices, supports paste-multiple-mints, pin/reorder, and 1h move alerts. Clicking a ticker opens Jupiter Exchange with the token preselected.
+jup.bar is a third-party sortable icon directory of **Jupiter Exchange** products. It is not operated by Jupiter Labs. Every link to jup.ag / *.jup.ag includes the builder's referral parameters (\`refId\` and \`ref\` = yfgv2ibxy07v).
 
-## Canonical URLs
-- Site: https://jup.bar
-- DMG: https://github.com/metasal1/macticker/releases/latest/download/jupbar-latest.dmg
-- App source: https://github.com/metasal1/macticker
-- Site source: https://github.com/metasal1/jup-bar
-- Builder: https://metasal.xyz · https://x.com/metasal
+## Featured destinations (re-linked)
+- Swap — https://jup.ag/swap
+- Spot — https://jup.ag/spot
+- Limit — https://jup.ag/limit
+- Recurring / DCA — https://jup.ag/recurring
+- Perps — https://jup.ag/perps
+- Prediction — https://jup.ag/prediction
+- Lend Earn — https://jup.ag/lend/earn
+- Lend Borrow — https://jup.ag/lend/borrow
+- Multiply — https://jup.ag/lend/borrow/multiply
+- Portfolio — https://jup.ag/portfolio
+- Send — https://jup.ag/send
+- Mobile — https://jup.ag/mobile
+- Studio — https://studio.jup.ag/launch
+- Stake — https://jup.ag/stake
+- Rewards — https://jup.ag/rewards
+- Governance — https://vote.jup.ag/
+- Developers — https://developers.jup.ag/
 
-## Install (macOS)
-1. Download jupbar-latest.dmg from the GitHub release link above.
-2. Open the DMG and drag JupBar to Applications.
-3. If Gatekeeper blocks: System Settings → Privacy & Security → Open Anyway, or:
-   \`xattr -rd com.apple.quarantine /Applications/jup.bar.app\`
+## UI
+- Categories: Trade · Earn · Manage · Apps · Dev · Tools
+- Sort: Featured · A–Z · Category
+- Search filter client-side
 
-## Features
-- Instant flow: hover pause; click ticker → Jupiter swap
-- Always on top / full-width toggle
-- Paste multiple mints (spaces, commas, newlines); CSV import/export
-- Pin + drag reorder; A–Z sort
-- Configurable 1h price-move alerts + sound test
-- Built for Jupiter Mobile + Jupiter Exchange workflows
+## Tooling tile
+- JupBar macOS DMG (GitHub release) — floating ticker; not a jup.ag re-link
 
-## Technical
-- Landing: Next.js on Cloudflare Pages (jup-bar)
-- Analytics: GA4 G-ZEE2ETRWL9
-- Sitemap: https://jup.bar/sitemap.xml
-- Robots: allow all + major AI crawlers
-
-## Branding
-- Tagline: Just Uptodate Pricing for Jupiter Cats
-- Theme: dark (#0b0f12) with orange/coral accent gradient
+## Builder
+- https://metasal.xyz · https://x.com/metasal · https://github.com/metasal1/jup-bar
 `;
 
 export function GET() {

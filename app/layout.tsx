@@ -17,9 +17,9 @@ const sora = Sora({
   display: "swap",
 });
 
-const title = "jup.bar — JupBar for Jupiter Cats";
+const title = "jup.bar — Jupiter Exchange ecosystem links";
 const description =
-  "JupBar is a floating macOS ticker bar built for Jupiter Cats. Just Uptodate Pricing for Jupiter Mobile and Jupiter Exchange.";
+  "Sortable icon directory of Jupiter products — Swap, Perps, Lend, Multiply, Portfolio, Mobile, Studio, and more. Every jup.ag link is a referral re-link.";
 
 export const metadata: Metadata = {
   title,
@@ -71,26 +71,45 @@ const jsonLd = {
       logo: "https://jup.bar/jupbar-icon.png",
       sameAs: [
         "https://x.com/metasal",
-        "https://github.com/metasal1/macticker",
+        "https://github.com/metasal1/jup-bar",
       ],
     },
     {
-      "@type": "SoftwareApplication",
-      "@id": "https://jup.bar/#app",
-      name: "JupBar",
-      applicationCategory: "FinanceApplication",
-      operatingSystem: "macOS",
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "USD",
-      },
-      downloadUrl:
-        "https://github.com/metasal1/macticker/releases/latest/download/jupbar-latest.dmg",
-      softwareVersion: "1.1.0",
-      description,
-      url: "https://jup.bar",
-      author: { "@id": "https://jup.bar/#org" },
+      "@type": "ItemList",
+      "@id": "https://jup.bar/#ecosystem",
+      name: "Jupiter Exchange ecosystem",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Jupiter Swap",
+          url: "https://jup.ag/swap",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Jupiter Perps",
+          url: "https://jup.ag/perps",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Jupiter Lend",
+          url: "https://jup.ag/lend/earn",
+        },
+        {
+          "@type": "ListItem",
+          position: 4,
+          name: "Jupiter Portfolio",
+          url: "https://jup.ag/portfolio",
+        },
+        {
+          "@type": "ListItem",
+          position: 5,
+          name: "Jupiter Mobile",
+          url: "https://jup.ag/mobile",
+        },
+      ],
     },
   ],
 };
@@ -117,7 +136,7 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
         <Script id="ga4-jup-bar" strategy="afterInteractive">
-          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`}
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');window.gtag=gtag;`}
         </Script>
       </body>
     </html>

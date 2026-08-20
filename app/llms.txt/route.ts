@@ -1,31 +1,25 @@
 const BODY = `# jup.bar
 
-> Floating macOS ticker bar for Jupiter Cats — Just Uptodate Pricing for Jupiter Mobile and Jupiter Exchange.
+> Sortable Jupiter Exchange ecosystem directory. Icon grid of official products with referral re-links on every jup.ag URL.
+
+## Purpose
+- Landing hub for Jupiter Cats to open Swap, Perps, Lend, Multiply, Portfolio, Mobile, Studio, Prediction, and more
+- All outbound https://jup.ag (and *.jup.ag) links append referral refId/ref = yfgv2ibxy07v
+- Optional: JupBar macOS ticker download (non-referral GitHub DMG)
 
 ## Site
 - Homepage: https://jup.bar/
-- Download (DMG): https://github.com/metasal1/macticker/releases/latest/download/jupbar-latest.dmg
-- Source: https://github.com/metasal1/macticker
-- Landing repo: https://github.com/metasal1/jup-bar
-
-## Product
-- Name: JupBar
-- Platform: macOS
-- Price: Free
-- Version: 1.1.0
-- Features: floating always-on-top ticker, multi-mint paste, pin/reorder, price-move alerts, click-to-open Jupiter swap
+- GA4: G-ZEE2ETRWL9
+- Sitemap: https://jup.ag is external; our sitemap is https://jup.ag no — https://jup.bar/sitemap.xml
 
 ## Contact
-- Builder: https://metasal.xyz
+- Builder: https://metasal.xyz/?ref=jupbar
 - X: https://x.com/metasal
-
-## Optional
 - Full text: https://jup.bar/llms-full.txt
-- Sitemap: https://jup.bar/sitemap.xml
 `;
 
 export function GET() {
-  return new Response(BODY, {
+  return new Response(BODY.replace("https://jup.ag no — ", ""), {
     headers: {
       "Content-Type": "text/plain; charset=utf-8",
       "Cache-Control": "public, max-age=3600",
