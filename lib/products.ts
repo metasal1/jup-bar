@@ -279,6 +279,16 @@ const RAW: Product[] = [
     official: true,
   },
   {
+    id: "gum",
+    name: "GUM",
+    blurb: "gum.ag - Siong / Nix onchain product",
+    href: "https://gum.ag/",
+    category: "apps",
+    icon: "jupiter-logo.svg",
+    featured: true,
+    official: true,
+  },
+  {
     id: "verified",
     name: "Jupiter Verified",
     blurb: "VRFD - Solana token verification. Submit, update metadata, flag bad data",
