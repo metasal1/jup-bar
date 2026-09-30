@@ -278,6 +278,16 @@ const RAW: Product[] = [
     featured: true,
     official: true,
   },
+  {
+    id: "verified",
+    name: "Jupiter Verified",
+    blurb: "VRFD - Solana token verification. Submit, update metadata, flag bad data",
+    href: "https://verified.jup.ag/",
+    category: "apps",
+    icon: "jupiter-logo.svg",
+    featured: true,
+    official: true,
+  },
   // —— Community / gov ——
   {
     id: "governance",
@@ -350,6 +360,15 @@ const RAW: Product[] = [
     name: "Data API",
     blurb: "Public market and token data endpoints",
     href: "https://datapi.jup.ag/",
+    category: "dev",
+    icon: "exchange.svg",
+    official: true,
+  },
+  {
+    id: "verified-api",
+    name: "Verified API",
+    blurb: "Express Verification API docs - submit VRFD programmatically",
+    href: "https://developers.jup.ag/docs/tokens/verification",
     category: "dev",
     icon: "exchange.svg",
     official: true,
