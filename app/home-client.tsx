@@ -299,6 +299,12 @@ export default function HomeClient() {
           </div>
           <div className="flex items-center gap-2">
             <a
+              href="/products"
+              className="hidden h-9 items-center rounded-full border border-border px-3 text-xs font-medium text-muted transition hover:border-primary/40 hover:text-primary sm:inline-flex"
+            >
+              Pages
+            </a>
+            <a
               href="/feedback"
               className="hidden h-9 items-center rounded-full border border-border px-3 text-xs font-medium text-muted transition hover:border-primary/40 hover:text-primary sm:inline-flex"
             >

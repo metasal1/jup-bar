@@ -418,6 +418,15 @@ const RAW: Product[] = [
     category: "external",
     official: false,
   },
+  {
+    id: "jupfun",
+    name: "jup.fun",
+    blurb: "Independent Solana meme launchpad. Launch a coin, pair it with anything",
+    href: "https://jup.fun/",
+    category: "external",
+    featured: true,
+    official: false,
+  },
 ];
 
 export const PRODUCTS: Product[] = RAW.map((p) => {
