@@ -115,7 +115,7 @@ export const PEOPLE: Person[] = [
     id: "9yointern",
     name: "9yointern",
     handle: "9yointern",
-    role: "Special projects",
+    role: "Head of Growth / special projects",
     href: "https://x.com/9yointern",
     note: "mei",
   },
